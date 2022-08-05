@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px black;
+    width: 70%;
+    height: auto;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.head{
+    background-color: cornflowerblue;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+h1{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 3em;
+}
+
+
+
+input {
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    height: 40px;
+    float: left;
+    font-size: 1.5em;
+}
+
+#btn {
+    padding: 10px;
+    width: 30%;
+    height: 40px;
+    background-color: rgb(21, 46, 92);
+    color: white;
+    border-radius: 0px;
+    text-align: center;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+#todo-items {
+    width: 100%;
+    height: auto;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    background: #ddd;
+}
+
+.item {
+    padding: 10px;
+    text-align: left;
+    margin-left: 0px;
+    background: lightgrey;
+}
+
+.close {
+    float: right;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+@media only screen and (max-width: 600px){
+    .head{
+        background-color: cornflowerblue;
+        display: flex;
+        flex-wrap:wrap;
+        color: white;
+        margin: 0;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+        display: block;
+        border: none;
+        border-radius: 0;
+        padding: 10px;
+        height: 40px;
+        float: left;
+        font-size: 15px;
+    }
+    
+    #btn {
+        padding: 10px;
+        width: 100%;
+        display:block;
+        height: 40px;
+        background-color: rgb(21, 46, 92);
+        color: white;
+        border-radius: 0px;
+        text-align: center;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+    #todo-items {
+        width: 100%;
+        height: auto;
+        display:flex;
+        flex-wrap: wrap;
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+        background: #ddd;
+    }
+}

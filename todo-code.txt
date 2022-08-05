@@ -1,0 +1,22 @@
+const returnText = () =>{
+    let input = document.getElementById('tagname').value;
+    console.log(input);
+    var para = document.createElement('div');
+    para.innerHTML = input;
+    document.body.appendChild(para);
+    input = " ";
+}
+
+===========================================================================================
+
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', (e) => {
+    let input = document.getElementById('tagname').value
+    alert(input);
+    const todoItems = document.createElement('div');
+    todoItems.innerHTML= input;
+    document.body.appendChild(todoItems);
+    document.getElementById('tagname').value = '';
+    localStorage.setItem('todoItems', input)
+});
