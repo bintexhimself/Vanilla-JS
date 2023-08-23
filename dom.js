@@ -1,34 +1,36 @@
-let count =0;
-for(count=0; count<=10; count++){
-console.log(count);
-}
+// let count =0;
+// for(count=0; count<=10; count++){
+// console.log(count);
+// }
 
 
 
-const calculateAge= (num)=>{
-    console.log(2022-num);
-}
+// const calculateAge= (num)=>{
+//     console.log(2022-num);
+// }
 
-calculateAge(1985);
+// calculateAge(1985);
 
 
 
-let toDoArr = ['Taking a walk with the president', 'Reading at night for exam', 'Doing the house shores'];
 
-const toDoItems = document.getElementById('todo-items');
-    toDoItems.innerHTML = ''; //resetting the list
+window.onload = ()=>{
+    let localData = localStorage.getItem('todoList');
+    console.log(localData);
+    
+    let toDoArr = JSON.parse(localData);
 
-toDoArr.forEach((e)=>{
-    const item = document.createElement('p');
-        toDoItems.appendChild(item);
-        item.innerHTML = e;
-        item.classList.add('item');
-        const btn = document.createElement('button');
-        btn.innerText = 'delete';
-        btn.classList.add('close');
-        item.appendChild(btn);
-        document.getElementById('tagname').value = '';
-})
+    toDoArr.forEach((e)=>{
+        const item = document.createElement('p');
+            toDoItems.appendChild(item);
+            item.innerHTML = e;
+            item.classList.add('item');
+            const btn = document.createElement('button');
+            btn.innerText = 'delete';
+            btn.classList.add('close');
+            item.appendChild(btn);
+            document.getElementById('tagname').value = '';
+    })
 
 //Deleting todo items//
 
@@ -42,6 +44,17 @@ btn.forEach((button)=>{
     }
 
 });
+    
+}
+
+let toDoArr = [];
+
+const toDoItems = document.getElementById('todo-items');
+    // toDoItems.innerHTML = ''; //resetting the list
+
+
+
+
 
 //Adding a todolist item//
 document.getElementById('btn').addEventListener('click', (e) =>{
@@ -74,7 +87,6 @@ document.getElementById('btn').addEventListener('click', (e) =>{
     }
      
     e.preventDefault();
-   
 });
 
 
